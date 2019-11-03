@@ -120,7 +120,7 @@
                         sellpoint += $"<td>{((float)i.Value * Model.Price).ToString("C0", CultureInfo.CreateSpecificCulture("en-us"))}</td>";
                         sellpoint += $"<td>{Infocards.FirstOrDefault(x => x.Key == Systems.First(y => y.Nickname == i.Key.System).Name).Value}</td>";
                         sellpoint += $"<td>{facName}</td>";
-                        sellpoint += $"<td>{Utils.GetGridCode(Systems.First(x => x.Nickname == i.Key.System), i.Key.Position, true)}</td>";
+                        sellpoint += $"<td>{Utils.GetGridCode(Systems.First(x => x.Nickname == i.Key.System).NavMapScale, i.Key.Position, true)}</td>";
                         sellpoint += "</tr>";
                         @Html.Raw(sellpoint)
                     }

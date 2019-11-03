@@ -22,7 +22,7 @@
             <span>Nickname: </span> @Model.Nickname <br />
             <span>Archetype: </span> @Model.ArchetypeNickname<br />
             <span>System: </span>@Infocards.Find(x => x.Key == System.Name).Value<br />
-            <span>Location: </span>@Utils.GetGridCode(System, Model.Position, true)<br />
+            <span>Location: </span>@Utils.GetGridCode(System.NavMapScale, Model.Position, true)<br />
             <span>Owner: </span>@faction<br />
             <br />
 
